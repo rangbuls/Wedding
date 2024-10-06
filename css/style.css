@@ -1,0 +1,531 @@
+
+:root{
+    --color: #cdc836;
+    --bg: #0a0a0a;
+    --shadow: 0 2px 2px rgb(0 0 0 /.5);
+}
+
+body{
+    font-size: 1.2rem;
+    font-family: "Noto Serif", serif;
+    min-height: 100vh;
+}
+
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/img/miya&jojo.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    filter: grayscale();
+}
+.hero{
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero h1, .hero h4, .hero h3{
+    text-shadow: var(--shadow);
+}
+
+.hero h3{
+    margin:auto;
+    width: 100%;
+    height: 400px;
+}
+
+.hero h4{
+    font-size: 1.6rem;
+}
+
+.hero h1{
+    font-family: "Italianno", cursive;
+    font-size: 6rem;
+}
+
+.hero a{
+    font-size: 1rem;
+    margin-top: 30px;
+    color: var(--color);
+    background-color: white;
+}
+
+.hero a:hover{
+    background-color: var(--color);
+    color: white;
+}
+
+.icon{
+    width: 35px;
+    height: 20px;
+}
+
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.container{
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.3) !important;
+    backdrop-filter: blur(4px);
+}
+
+.mynavbar .navbar-brand{
+    font-family: "Roboto", sans-serif ;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.home{
+    min-height: 100vh;
+    background-image: url('../media/img/cover.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -3.9rem ;
+    padding-top: 12rem;
+    padding-bottom: 5rem;
+}
+
+.home h1{
+    color: hotpink;
+    font-family: "Italianno", cursive;
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.home h5{
+    font-size: 1.6rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.arrow-container {
+    position: relative;
+    height: 200px; /* Adjust height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-down {
+    width: 60px;
+    height: 60px;
+    border-right: 5px solid rgba(169, 166, 166,.5);
+    border-bottom: 5px solid rgba(169, 166, 166,.5);
+    transform: rotate(45deg);
+    animation: bounce 1.5s infinite;
+    opacity: 0.8;
+    box-shadow: rgba(0,0,0,1);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) rotate(45deg);
+    }
+    50% {
+        transform: translateY(15px) rotate(45deg);
+    }
+}
+
+.couple::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/img/cover.png');
+    background-position: bottom;
+    transform: rotate(180deg);
+    transform: scaleY(-1);
+    z-index: -1;
+    filter: blur(2px);
+}
+.couple{
+    min-height: 100vh;
+    position: relative;
+    padding-top: 60px;
+    margin-top: -.5rem;
+    min-height: 50vh;
+}
+
+.deco{
+    margin: auto;
+    max-width:90%;
+    height: 1px;
+    border-left: 45vw  solid transparent;
+    border-right: 45vw  solid transparent;
+    border-bottom: 3vh solid #e0e0e0; /* Warna segitiga, bisa disesuaikan */
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.event{
+    padding-top: 30px;
+    min-height: 100vh;
+}
+.event h2{
+    padding-top: 20px;
+    color: rgba(128, 128, 128, 0.726);
+    font-family: "Dancing Script", cursive;
+    font-size: 2rem;
+}
+
+.event h2::after{
+    content: '';
+    display: inline-block;
+    width: 80%;
+    height: 1px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.event h1{
+    color: rgba(128, 128, 128, 0.726) ;
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+    margin-top: -15px;
+}
+
+/* card */
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    overflow: block;
+    width: 600px;
+    border: 1px solid #ddd;
+    margin: auto;
+}
+
+/* Bagian kiri dari card yang memuat informasi tanggal */
+.card-left {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Tanggal besar */
+.date {
+    font-size: 72px;
+    font-weight: bold;
+    color: #4f4f4f;
+    margin: 0;
+}
+
+/* Informasi hari dan bulan */
+.day-month {
+    font-size: 18px;
+    color: #6e6e6e;
+    margin: 5px 0;
+}
+
+/* Divider atau garis horizontal */
+.divider {
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+/* Informasi waktu dan lokasi */
+.info {
+    font-size: 16px;
+    color: #4f4f4f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info img {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.location {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
+
+.location img{
+    width: 18px;
+    margin-right: 5px;
+    margin-bottom: 7px;
+}
+.address {
+    font-size: 14px;
+    color: #6e6e6e;
+}
+
+/* Tombol Google Maps */
+.google-maps-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+.google-maps-button img{
+    width: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+/* Bagian kanan dari card */
+.card-right {
+    background-color: #FFDBDB;
+    color: rgba(0, 0, 0, 0.497);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.rsvp h2,
+.wish h2{
+    padding-top: 20px;
+    color: var(--color);
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
+}
+
+.rsvp {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    background-color: var(--bg);
+}
+
+.rsvp p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: whitesmoke;
+}
+  
+  form input, form select {
+    height: 45px; /* Agar elemen form lebih tinggi dan terlihat lebih jelas */
+  }
+
+.rsvp form label{
+    color: white;
+}
+
+.rsvp button{
+    background-color: #f14e95;
+    color: white;
+    border: 1px solid #f14e95 ;
+}
+
+.rsvp button:hover{
+    background-color: white;
+    color: #f14e95;
+    border: 1px solid white ;
+}
+
+.wish{
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+}
+
+.wish span{
+    text-transform: uppercase;
+    color: #666;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.wish p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.list-group span{
+    font-size: 1.2rem;
+}
+
+footer{
+    padding: 3rem;
+    background-color: #f14e95;
+    color: white;
+}
+
+footer a{
+    color: var(--bg);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+footer a:hover{
+    color: white;
+}
+
+footer li{
+    list-style: none;
+    display: inline;
+}
+
+.audio-icon-wrapper{
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2rem;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+    animation: rotating 4s linear infinite;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    line-height: 0;
+}
+
+@keyframes rotating {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+/* Media Query */
+/* Laptop */
+@media (max-width: 992px) {
+    html {
+        font-size: 80%; 
+    }
+    
+    .simply-countdown > .simply-section {
+        padding: 40px !important;
+    }
+
+    .arrow-down {
+        width: 50px;
+        height: 50px;
+    }
+
+    .home{
+        min-height: 85vh;
+    }
+    
+   
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html{
+        font-size: 70%;
+    }
+
+    .simply-countdown > .simply-section {
+        padding: 30px !important;
+        margin: 5px !important;
+    }
+
+    .arrow-down {
+        width: 40px;
+        height: 40px;
+    }
+
+    .home{
+        min-height: 100vh;
+    }
+
+    .couple{
+        min-height: 40vh;
+    }
+
+    .deco{
+        max-width:80%;
+        border-left: 40% ;
+        border-right: 30%;
+        border-bottom: 3vh solid #e0e0e0;
+    }
+    
+    .card {
+        flex-direction: row;
+        width: 80%;
+    }
+
+    .date {
+        font-size: 48px;
+    }
+
+    .day-month {
+        font-size: 16px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
+
+    .google-maps-button {
+        font-size: 12px;
+    }
+
+    .card-right {
+        font-size: 16px;
+        padding: 30px;
+        writing-mode: vertical-rl;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    html{
+        font-size: 60%;
+    }
+
+    .simply-countdown > .simply-section {
+        padding: 25px !important;
+        margin: 3px !important;
+    }
+
+    .arrow-down {
+        width: 30px;
+        height: 30px;
+    }
+
+    .home{
+        min-height: 100vh;
+    }
+
+
+}
