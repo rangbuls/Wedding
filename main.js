@@ -49,7 +49,7 @@ function enableScroll(){
 
   function playAudio(){
     
-    song.volume = 0.5;
+    song.volume = 0.1;
     audioIconWrapper.style.display = 'flex';
     song.play();
     isPlaying = true;
